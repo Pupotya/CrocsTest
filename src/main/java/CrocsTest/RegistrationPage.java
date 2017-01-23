@@ -13,31 +13,45 @@ public class RegistrationPage {
     private final By passwordConfirm = By.id("dwfrm_profile_login_passwordconfirm");
     private final By clickRegister = By.name("dwfrm_profile_register");
 
-
     private WebDriver driver;
+
     public RegistrationPage(WebDriver driver) {
         this.driver = driver;
     }
-    public void enterFirstName(String S){
+
+    public RegistrationPage enterFirstName(String S) {
         driver.findElement(firstName).sendKeys(S);
+        return this;
     }
-    public void enterLastName(String S){
+
+    public RegistrationPage enterLastName(String S) {
         driver.findElement(lastName).sendKeys(S);
+        return this;
     }
-    public void enterLoginField(String S){
+
+    public RegistrationPage enterLoginField(String S) {
         driver.findElement(loginUserName).sendKeys(S);
+        return this;
     }
-    public void enterLoginFieldConfirm(String S){
+
+    public RegistrationPage enterLoginFieldConfirm(String S) {
         driver.findElement(loginUserNameConfirm).sendKeys(S);
+        return this;
     }
-    public void enterUserPassword(String S){
+
+    public RegistrationPage enterUserPassword(String S) {
         driver.findElement(password).sendKeys(S);
+        return this;
     }
-    public void enteruserPasswordConfirmation(String S){
+
+    public RegistrationPage enteruserPasswordConfirmation(String S) {
         driver.findElement(passwordConfirm).sendKeys(S);
+        return this;
     }
-    public void clickRegiser(){
+
+    public RegistrationPage clickRegiser() {
         driver.findElement(clickRegister).click();
+        return this;
     }
 
 
